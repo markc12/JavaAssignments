@@ -33,12 +33,13 @@ public class ControllerTest {
     }
 
     @Test
+    //for the purpose of this assignment a well-formed email is one that contains the at symbol and ends in .com
     public void testIfEmailIsWellFormed(){
         assertTrue(controller.isEmailWellFormed(userEmail));
-        assertTrue(controller.isEmailWellFormed(userEmail2));
-        assertTrue(controller.isEmailWellFormed(userEmail3));
-        assertTrue(controller.isEmailWellFormed(userEmail4));
-        assertTrue(controller.isEmailWellFormed(userEmail5));
+        assertFalse(controller.isEmailWellFormed(userEmail2));
+        assertFalse(controller.isEmailWellFormed(userEmail3));
+        assertFalse(controller.isEmailWellFormed(userEmail4));
+        assertFalse(controller.isEmailWellFormed(userEmail5));
     }
 
     @Test
