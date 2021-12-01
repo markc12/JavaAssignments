@@ -57,7 +57,23 @@ public class HelloController {
         HelloController helloController = new HelloController();
         if (helloController.isEmailNull(tf1.getText())) {
             welcomeText.setText("Rejected!!!");
-        } else {
+        }
+        else if (!helloController.isEmailWellFormed(tf1.getText())){
+            welcomeText.setText("Rejected!!!");
+        }
+        else if (!helloController.isPasswordLengthCorrect(tf2.getText())){
+            welcomeText.setText("Rejected!!!");
+        }
+        else if (!helloController.isLetterInPassword(tf2.getText())){
+            welcomeText.setText("Rejected!!!");
+        }
+        else if (!helloController.isNumberInPassword(tf2.getText())){
+            welcomeText.setText("Rejected!!!");
+        }
+        else if (!helloController.isSpecialCharacterInPassword(tf2.getText())){
+            welcomeText.setText("Rejected!!!");
+        }
+        else {
             welcomeText.setText("Welcome to JavaFX Application!");
         }
     }
