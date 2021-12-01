@@ -66,7 +66,7 @@ public class ControllerTest {
     public void testIfPasswordHasLetter(){
         assertTrue(controller.isLetterInPassword(userPassword));
         assertTrue(controller.isLetterInPassword(userPassword2));
-        assertTrue(controller.isLetterInPassword(userPassword3));
+        assertFalse(controller.isLetterInPassword(userPassword3));
         assertTrue(controller.isLetterInPassword(userPassword4));
         assertTrue(controller.isLetterInPassword(userPassword5));
     }
