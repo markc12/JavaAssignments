@@ -3,10 +3,23 @@ package com.example.java_a03;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import java.util.regex.*;
+import javafx.scene.control.TextField;
 
 public class HelloController {
     @FXML
     private Label welcomeText;
+
+    @FXML
+    private Label userEmail;
+
+    @FXML
+    private TextField tf1;
+
+    @FXML
+    private TextField tf2;
+
+    @FXML
+    private Label userPassword;
 
     public boolean isEmailNull(String email){
         return email.isEmpty();
