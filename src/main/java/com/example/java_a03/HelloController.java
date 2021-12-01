@@ -16,7 +16,7 @@ public class HelloController {
         return email.endsWith(".com") && email.contains("@");
     }
 
-    public boolean isLengthCorrect(String password){
+    public boolean isPasswordLengthCorrect(String password){
         return password.length() >= 7;
     }
 

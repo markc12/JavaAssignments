@@ -26,7 +26,7 @@ public class ControllerTest {
     @Test
     public void testIfEmailIsNotNull() {
         assertFalse(controller.isEmailNull(userEmail));
-        assertFalse(controller.isEmailNull(userEmail2));
+        assertTrue(controller.isEmailNull(userEmail2));
         assertFalse(controller.isEmailNull(userEmail3));
         assertFalse(controller.isEmailNull(userEmail4));
         assertFalse(controller.isEmailNull(userEmail5));
@@ -43,11 +43,11 @@ public class ControllerTest {
 
     @Test
     public void testIfPasswordIsCorrectLength(){
-        assertTrue(controller.isLengthCorrect(userPassword));
-        assertTrue(controller.isLengthCorrect(userPassword2));
-        assertTrue(controller.isLengthCorrect(userPassword3));
-        assertTrue(controller.isLengthCorrect(userPassword4));
-        assertTrue(controller.isLengthCorrect(userPassword5));
+        assertTrue(controller.isPasswordLengthCorrect(userPassword));
+        assertTrue(controller.isPasswordLengthCorrect(userPassword2));
+        assertTrue(controller.isPasswordLengthCorrect(userPassword3));
+        assertTrue(controller.isPasswordLengthCorrect(userPassword4));
+        assertTrue(controller.isPasswordLengthCorrect(userPassword5));
     }
 
     @Test
