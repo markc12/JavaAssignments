@@ -48,7 +48,7 @@ public class ControllerTest {
         assertTrue(controller.isPasswordLengthCorrect(userPassword2));
         assertTrue(controller.isPasswordLengthCorrect(userPassword3));
         assertTrue(controller.isPasswordLengthCorrect(userPassword4));
-        assertTrue(controller.isPasswordLengthCorrect(userPassword5));
+        assertFalse(controller.isPasswordLengthCorrect(userPassword5));
     }
 
     @Test
