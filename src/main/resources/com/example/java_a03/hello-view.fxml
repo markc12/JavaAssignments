@@ -20,5 +20,5 @@
   <Label text="Password" fx:id="userPassword"/>
   <TextField fx:id="tf2"/>
 
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+  <Button text="Continue" onAction="#onHelloButtonClick"/>
 </VBox>

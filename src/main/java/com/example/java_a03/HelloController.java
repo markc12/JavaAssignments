@@ -21,31 +21,31 @@ public class HelloController {
     @FXML
     private Label userPassword;
 
-    public boolean isEmailNull(String email){
+    public boolean isEmailNull(String email) {
         return email.isEmpty();
     }
 
-    public boolean isEmailWellFormed(String email){
+    public boolean isEmailWellFormed(String email) {
         return email.endsWith(".com") && email.contains("@");
     }
 
-    public boolean isPasswordLengthCorrect(String password){
+    public boolean isPasswordLengthCorrect(String password) {
         return password.length() >= 7;
     }
 
-    public boolean isNumberInPassword(String password){
+    public boolean isNumberInPassword(String password) {
         Pattern p1 = Pattern.compile("[1234567890]");
         Matcher m1 = p1.matcher(password);
         return m1.find();
     }
 
-    public boolean isLetterInPassword(String password){
+    public boolean isLetterInPassword(String password) {
         Pattern p2 = Pattern.compile("[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]");
         Matcher m2 = p2.matcher(password);
         return m2.find();
     }
 
-    public boolean isSpecialCharacterInPassword(String password){
+    public boolean isSpecialCharacterInPassword(String password) {
         Pattern p3 = Pattern.compile("[&^*!@]");
         Matcher m3 = p3.matcher(password);
         return m3.find();
@@ -54,6 +54,11 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        HelloController helloController = new HelloController();
+        if (helloController.isEmailNull(tf1.getText())) {
+            welcomeText.setText("Rejected!!!");
+        } else {
+            welcomeText.setText("Welcome to JavaFX Application!");
+        }
     }
 }

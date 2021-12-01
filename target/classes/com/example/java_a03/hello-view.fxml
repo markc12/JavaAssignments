@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.java_a03.HelloController">
   <padding>
@@ -12,5 +13,12 @@
   </padding>
 
   <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+  <Label text="Email" fx:id="userEmail"/>
+  <TextField fx:id="tf1"/>
+
+  <Label text="Password" fx:id="userPassword"/>
+  <TextField fx:id="tf2"/>
+
+  <Button text="Continue" onAction="#onHelloButtonClick"/>
 </VBox>
