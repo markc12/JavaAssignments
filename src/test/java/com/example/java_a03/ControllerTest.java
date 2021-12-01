@@ -76,7 +76,7 @@ public class ControllerTest {
         assertTrue(controller.isSpecialCharacterInPassword(userPassword));
         assertTrue(controller.isSpecialCharacterInPassword(userPassword2));
         assertTrue(controller.isSpecialCharacterInPassword(userPassword3));
-        assertTrue(controller.isSpecialCharacterInPassword(userPassword4));
+        assertFalse(controller.isSpecialCharacterInPassword(userPassword4));
         assertTrue(controller.isSpecialCharacterInPassword(userPassword5));
 
     }
