@@ -54,7 +54,7 @@ public class ControllerTest {
     @Test
     public void testIfPasswordHasNumber(){
         assertTrue(controller.isNumberInPassword(userPassword));
-        assertTrue(controller.isNumberInPassword(userPassword2));
+        assertFalse(controller.isNumberInPassword(userPassword2));
         assertTrue(controller.isNumberInPassword(userPassword3));
         assertTrue(controller.isNumberInPassword(userPassword4));
         assertTrue(controller.isNumberInPassword(userPassword5));
